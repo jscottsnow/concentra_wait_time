@@ -61,5 +61,8 @@ def index():
 def display_wait_times():
     return render_template("wait_times.html", wait_times=load_wait_times())
 
+import eventlet
+import eventlet.wsgi
+
 if __name__ == "__main__":
-    socketio.run(app, debug=True, host="0.0.0.0") 
+    eventlet.wsgi.server(eventlet.listen(("0.0.0.0", 5000)), app)
