@@ -1,9 +1,8 @@
-nixpacks.toml
 [phases.setup]
-nixPkgs = ["python310", "gcc"] # Ensures Python 3.10 and GCC are available
+nixPkgs = ["python311", "gcc"]
 
-[phases.install]
-cmds = ["pip install -r requirements.txt"]  # Installs dependencies
+[phases.build]
+cmds = ["pip install -r requirements.txt"]
 
-[phases.start]
-cmds = ["python app.py"]  # Runs your Flask appc
+[start]
+cmd = "python app.py"
