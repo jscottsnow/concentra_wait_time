@@ -5,7 +5,7 @@ import os
 
 app = Flask(__name__, template_folder="templates")
 app.config['SECRET_KEY'] = 'secret!'  
-socketio = SocketIO(app, cors_allowed_origins="*", async_mode="threading")
+socketio = SocketIO(app, async_mode="eventlet", cors_allowed_origins="*")
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 JSON_FILE = os.path.join(BASE_DIR, 'wait_times.json')
