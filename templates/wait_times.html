@@ -3,7 +3,6 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <h1 style="text-align: right; margin-right: 50px;">Clinic Wait Times</h1>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
         <style>
             body {
@@ -16,12 +15,16 @@
             .header {
                 display: flex;
                 align-items: center;
-                justify-content: start;
+                justify-content: space-between; /* Adjusts spacing */
                 padding: 10px;
             }
             .header img {
-                height: 60px;
-                margin-right: 20px;
+                height: 80px; /* Increased size */
+                margin-left: 20px;
+            }
+            .header h1 {
+                text-align: right;
+                margin-right: 50px;
             }
             .container {
                 display: grid;
@@ -41,8 +44,8 @@
     </head>
     <body>
         <div class="header">
-            <img src="{{ url_for('static', filename='Concentra_Logo.jpg') }}" alt="Concentra Logo" style="height: 80px;">
-            <h1 style="text-align: right; margin-right: 50px;">Clinic Wait Times</h1>
+            <img src="{{ url_for('static', filename='Concentra_Logo.jpg') }}" alt="Concentra Logo">
+            <h1>Clinic Wait Times</h1> <!-- This is now correctly positioned -->
         </div>
         <div class="container">
             <div class="wait-time">Injuries: <span id="injuries">--</span> min</div>
@@ -77,4 +80,3 @@
         </script>
     </body>
 </html>
-        
