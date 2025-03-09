@@ -1,7 +1,7 @@
 <form action="{{ url_for('update_wait_time', category='injury_rechecks') }}" method="post">
     <h1>Injury Rechecks Wait Time</h1>
-    <p style="font-size: 24px;">Current wait time: {{ injury_rechecks_wait_time }} minutes</p>
-    <input id="new-wait-time" name="injury_rechecks_wait_time" type="text" placeholder="Enter new wait time" style="font-size: 24px; padding: 10px;">
-    <button type="submit" style="font-size: 24px; padding: 10px 20px;">Update Wait Time</button>
+    <p style="font-size: 22px;">Current wait time: {{ injury_rechecks_wait_time }} minutes</p>
+    <input id="new-wait-time" name="injury_rechecks_wait_time" type="text" placeholder="Enter new wait time" style="font-size: 22px; padding: 10px;">
+    <button type="submit" style="font-size: 22px; padding: 10px 20px;">Update Wait Time</button>
 </form>
-<a href="{{ url_for('index') }}">Main Menu</a>
+<a href="{{ url_for('index') }}" style="display: inline-block; padding: 10px 20px; font-size: 24px; text-align: center; background-color: #4CAF50; color: white; border: none; border-radius: 5px; text-decoration: none;">Main Menu</a>
