@@ -15,7 +15,7 @@
             .header {
                 display: flex;
                 align-items: center;
-                justify-content: center; /* Adjusts spacing */
+                justify-content: start; /* Moves logo to the left */
                 padding: 10px;
             }
             .header img {
@@ -46,7 +46,7 @@
             }
             .page-title {
                 text-align: center;
-                font-size: 2em; /* Adjust size as needed */
+                font-size: 2em;
                 margin-top: 20px;
             }
         </style>
@@ -55,6 +55,8 @@
         <div class="header">
             <img src="{{ url_for('static', filename='Concentra_Logo.jpg') }}" alt="Concentra Logo">
         </div>
+        <h1 class="page-title">Clinic Wait Times</h1>
+
         </div>
         <div class="container">
             <div class="wait-time">Injuries: <span id="injuries">--</span> min</div>
