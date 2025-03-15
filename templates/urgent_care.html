@@ -1,7 +1,13 @@
 <form action="{{ url_for('update_wait_time', category='urgent_care')}}" method="post">
     <h1>Urgent Care Wait Time</h1>
     <p style="font-size: 18px;" >Current wait time {{ urgent_care_wait_time }} minutes</p>
-    <input id="new-wait-time" name="urgent_care_wait_time" type="text" placeholder="Enter new wait time" style="font-size: 18px; padding: 10px;">
+    <label for="hours">Hours:</label>
+<input id="hours" name="hours" type="number" min="0" placeholder="0" style="width: 60px;">
+
+<label for="minutes">Minutes:</label>
+<input id="minutes" name="minutes" type="number" min="0" max="59" placeholder="0" style="width: 60px;">
+
+<button type="submit">Update Wait Time</button>
     <button type="submit" style="font-size: 18px; padding: 10px 20px;">Update Wait Time</button>
     </form>
     <a href="{{ url_for('index') }}" 

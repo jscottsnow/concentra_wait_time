@@ -1,7 +1,11 @@
 <form action="{{ url_for('update_wait_time', category='physicals')}}" method="post">
     <h1>Physicals Wait Time</h1>
     <p style="font-size: 18px;"></p>Current wait time: {{ physicals_wait_time }} minutes</p>
-    <input id="new-wait-time" name="physicals_wait_time" type="text" placeholder="Enter new wait time" style="font-size: 18px; padding: 10px;">
+    <label for="hours">Hours:</label>
+    <input id="hours" name="hours" type="number" min="0" placeholder="0" style="width: 60px;">
+
+<label for="minutes">Minutes:</label>
+<input id="minutes" name="minutes" type="number" min="0" max="59" placeholder="0" style="width: 60px;">
     <button type="submit" style="font-size: 18px; padding: 10px 20px;">Update Wait Time</button>
 </form>
 <a href="{{ url_for('index') }}" 
