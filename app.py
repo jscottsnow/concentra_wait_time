@@ -44,8 +44,8 @@ def urgent_care():
 
 @app.route("/update_wait_time/<category>", methods=["POST"])
 def update_wait_time(category):
-    hours = init(request.form.get("hours",0))
-    Minutes = init(request.form.get("mintues", 0))
+    hours = int(request.form.get("hours",0))
+    Minutes = int(request.form.get("mintues", 0))
     total_minutes = (hours * 60) + minutes
     wait_times[category] = str(total_minutes)
     save_wait_times(wait_times)
